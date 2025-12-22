@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>My Presentation</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+
+    <link rel="stylesheet" href="./_assets/custom.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown data-separator="\r?\n---\r?\n" data-separator-vertical="\r?\n----\r?\n">
+          <textarea data-template>
+            
+
+
+# Slide 1
+
+*   Bullet point 1
+*   Bullet point 2
+
+---
+
+# Slide 2
+
+---
+
+
+## Empirical Strategies
+
+- <!-- .element: class="fragment" --> Cross-sectional analysis
+- <!-- .element: class="fragment" --> Panel data
+- <!-- .element: class="fragment" --> Time series
+- <!-- .element: class="fragment" --> Network models
+
+---
+
+## Logistic Regression (R)
+
+```r
+model <- glm(vote ~ income + ideology,
+             data = survey,
+             family = binomial())
+summary(model)
+
+
+---
+
+## Echo Chambers as Network Structures (이미지 위치는 md 파일 산하)
+
+<img src="img/ech.jpg" width="20%">
+
+- High clustering
+- Low bridging ties
+- Algorithmic reinforcement
+
+---
+
+## 가운데 정렬
+<div style="text-align: center;">
+  <img src="img/ech.jpg" width="35%">
+</div>
+
+---
+# Two Column slide
+
+---
+## Panel vs Time Series
+
+<div style="display: flex;">
+
+
+<div style="width: 50%;">
+<h3> Panel Data </h3>
+- Many units
+- Few time points
+- Between-unit variation
+</div>
+
+
+<div style="width: 50%;">
+<h3> Time Series </h3>
+- One/few units
+- Long time span
+- Temporal dynamics
+</div>
+
+
+</div>
+
+---
+
+<div style="display: flex;">
+
+<div style="width: 50%;">
+
+<h3>Panel Data</h3>
+<ul>
+  <li>Many units</li>
+  <li>Few time points</li>
+  <li>Between-unit variation</li>
+</ul>
+
+</div>
+
+<div style="width: 50%;">
+
+<h3>Time Series</h3>
+<ul>
+  <li>One/few units</li>
+  <li>Long time span</li>
+  <li>Temporal dynamics</li>
+</ul>
+
+</div>
+</div>
+
+---
+## Structural Inversion Hypothesis
+
+Network homogeneity is not accidental.
+
+Note:
+노트 아래 부분은 슬라이드에 안뜸.
+preview에서 S를 치면 별도의 창이 뜨면서 다 나옴.
+
+이 부분에서 Schich의 diversity 논리와
+온라인 정치 네트워크의 차이를 강조
+
+---
+
+
+## Think About This
+
+If infrastructure access is unequal,
+can elections alone fix it?
+
+- Yes?
+- No?
+- Under what conditions?
+
+
+---
+## Data
+
+- Patent co-authorship network
+- 1975–2010
+- SAOM (RSiena)
+
+---
+
+## Finding
+
+> Diversity precedes resilience  
+> Homogeneity precedes collapse
+
+---
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={"projection": "polar"})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+
+
+
+
+
+
+
+          </textarea>
+        </section>
+      </div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"_":["revealjs_prac.md","\\","\\","\\"],"static":"docs","css":"custom.css","speaker-notes":true,"speakerNotes":true}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
+    </script>
+  </body>
+</html>
