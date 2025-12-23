@@ -6,6 +6,7 @@ format:
     transition: slide
     controls: true
     controls-layout: bottom-right
+    navigation-mode: vertical
 ---
 
 
@@ -28,20 +29,28 @@ format:
 - <!-- .element: class="fragment" --> Time series
 - <!-- .element: class="fragment" --> Network models
 
----
 
-## Logistic Regression (R)
+----
+
+<!-- 상하  -->
+
+### Logistic Regression (R)
+
 
 ```r
 model <- glm(vote ~ income + ideology,
              data = survey,
              family = binomial())
 summary(model)
+```
+Check
 
 
 ---
 
-## Echo Chambers as Network Structures (이미지 위치는 md 파일 산하)
+## Echo Chambers as Network Structures 
+<!-- 이미지 위치는 md 파일 산하 -->
+
 
 <img src="img/ech.jpg" width="20%">
 
