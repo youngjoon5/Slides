@@ -4,12 +4,11 @@ author: "Young Joon Oh"
 theme: "night"
 progress: true
 revealOptions:
-  slideNumber: "c/t"
   transition: "slide"
 ---
 
-
 # Data, Analysis, and Model
+
 ### Young Joon Oh
 #### Political Behavior & Methods
 
