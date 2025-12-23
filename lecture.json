@@ -1,0 +1,14 @@
+{
+  "title": "Slides — Young Joon Oh",
+  "theme": "simple",
+  "transition": "slide",
+  "css": "css/lecture.css",
+  "speakerNotes": true,
+  "revealOptions": {
+    "controls": true,
+    "progress": true,
+    "slideNumber": true,
+    "center": false,
+    "hash": true
+  }
+}

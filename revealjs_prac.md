@@ -1,15 +1,9 @@
----
-title: "My Presentation"
-author: "Young Joon Oh"
-format:
-  revealjs:
-    transition: slide
-    controls: true
-    controls-layout: bottom-right
-    navigation-mode: vertical
----
 
+# Data, Analysis, and Model
+### Young Joon Oh
+#### Political Behavior & Methods
 
+---
 # Slide 1
 
 *   Bullet point 1
@@ -24,10 +18,10 @@ format:
 
 ## Empirical Strategies
 
-- <!-- .element: class="fragment" --> Cross-sectional analysis
-- <!-- .element: class="fragment" --> Panel data
-- <!-- .element: class="fragment" --> Time series
-- <!-- .element: class="fragment" --> Network models
+- <!-- .element: class="fragment" -->  Cross-sectional analysis
+- <!-- .element: class="fragment" -->Panel data
+- Time series
+-  Network models
 
 
 ----
@@ -69,30 +63,8 @@ Check
 # Two Column slide
 
 ---
+
 ## Panel vs Time Series
-
-<div style="display: flex;">
-
-
-<div style="width: 50%;">
-<h3> Panel Data </h3>
-- Many units
-- Few time points
-- Between-unit variation
-</div>
-
-
-<div style="width: 50%;">
-<h3> Time Series </h3>
-- One/few units
-- Long time span
-- Temporal dynamics
-</div>
-
-
-</div>
-
----
 
 <div style="display: flex;">
 
