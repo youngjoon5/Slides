@@ -78,26 +78,23 @@ Check
 <div style="display: flex;">
 
 <div style="width: 50%;">
-
 <h3>Panel Data</h3>
 <ul>
   <li>Many units</li>
   <li>Few time points</li>
   <li>Between-unit variation</li>
 </ul>
-
 </div>
 
 <div style="width: 50%;">
-
 <h3>Time Series</h3>
 <ul>
   <li>One/few units</li>
   <li>Long time span</li>
   <li>Temporal dynamics</li>
 </ul>
-
 </div>
+
 </div>
 
 ---
