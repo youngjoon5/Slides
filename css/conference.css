@@ -1,0 +1,19 @@
+@import url("./base.css");
+
+/* 작게 많은 내용 */
+.reveal { font-size: 26px; }
+.reveal p, .reveal li { margin: 0.25em 0; }
+
+.reveal h1 { font-size: 1.7em; }
+.reveal h2 { font-size: 1.3em; }
+.reveal h3 { font-size: 1.05em; }
+
+/* 코드:작게 */
+.reveal pre code { font-size: 0.75em; }
+
+/* 이미지: 텍스트+그림 */
+.reveal img { max-width: 55%; }
+
+/* footer는 더 얇게 */
+.footer-nav { font-size: 0.5em; opacity: 0.7; }
+

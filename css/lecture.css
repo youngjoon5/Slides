@@ -1,0 +1,21 @@
+@import url("./base.css");
+
+/* 강의용 */
+.reveal { font-size: 34px; }
+.reveal p, .reveal li { margin: 0.4em 0; }
+
+.reveal h1 { font-size: 2.0em; }
+.reveal h2 { font-size: 1.5em; }
+.reveal h3 { font-size: 1.2em; }
+
+/* 코드 */
+.reveal pre code { font-size: 0.85em; }
+
+/* 이미지 */
+.reveal img { max-width: 70%; }
+
+/* 번호 */
+.reveal .slide-number {
+  font-size: 16px;
+  opacity: 0.75;
+}

@@ -1,0 +1,17 @@
+.reveal { line-height: 1.25; }
+
+.reveal code, .reveal pre code { font-size: 0.8em; }
+.reveal pre { overflow: auto; }
+
+.reveal img { max-width: 80%; height: auto; }
+
+.footer-nav {
+  position: fixed;
+  bottom: 12px;
+  left: 0; right: 0;
+  text-align: center;
+  font-size: 0.55em;
+  opacity: 0.8;
+  z-index: 9999;
+}
+.footer-nav a { text-decoration: none; }
