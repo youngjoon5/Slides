@@ -2,13 +2,10 @@
 title: "My Presentation"
 author: "Young Joon Oh"
 theme: "night"
-
+progress: true
 revealOptions:
-  controls: true
-  progress: true
   slideNumber: "c/t"
   transition: "slide"
-  navigationMode: "linear"
 ---
 
 
