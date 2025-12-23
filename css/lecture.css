@@ -21,7 +21,7 @@
 }
 
 
-/* ===== Global Header ===== */
+/*  ===== Global Header ===== */
 .reveal::before {
   content: "Data, Analysis, and Models";
   position: fixed;
