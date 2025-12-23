@@ -8,10 +8,10 @@
     <link rel="shortcut icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
-    <link rel="stylesheet" href="./dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="./dist/theme/night.css" id="theme" />
     <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
-    <link rel="stylesheet" href="./_assets/custom.css" />
+    <link rel="stylesheet" href="./_assets/css/lecture.css" />
   </head>
   <body>
     <div class="reveal">
@@ -21,6 +21,11 @@
             
 
 
+# Data, Analysis, and Model
+### Young Joon Oh
+#### Political Behavior & Methods
+
+---
 # Slide 1
 
 *   Bullet point 1
@@ -35,25 +40,33 @@
 
 ## Empirical Strategies
 
-- <!-- .element: class="fragment" --> Cross-sectional analysis
-- <!-- .element: class="fragment" --> Panel data
-- <!-- .element: class="fragment" --> Time series
-- <!-- .element: class="fragment" --> Network models
+- <!-- .element: class="fragment" -->  Cross-sectional analysis
+- <!-- .element: class="fragment" -->Panel data
+- Time series
+-  Network models
 
----
 
-## Logistic Regression (R)
+----
+
+<!-- 상하  -->
+
+### Logistic Regression (R)
+
 
 ```r
 model <- glm(vote ~ income + ideology,
              data = survey,
              family = binomial())
 summary(model)
+```
+Check
 
 
 ---
 
-## Echo Chambers as Network Structures (이미지 위치는 md 파일 산하)
+## Echo Chambers as Network Structures 
+<!-- 이미지 위치는 md 파일 산하 -->
+
 
 <img src="img/ech.jpg" width="20%">
 
@@ -72,30 +85,8 @@ summary(model)
 # Two Column slide
 
 ---
+
 ## Panel vs Time Series
-
-<div style="display: flex;">
-
-
-<div style="width: 50%;">
-<h3> Panel Data </h3>
-- Many units
-- Few time points
-- Between-unit variation
-</div>
-
-
-<div style="width: 50%;">
-<h3> Time Series </h3>
-- One/few units
-- Long time span
-- Temporal dynamics
-</div>
-
-
-</div>
-
----
 
 <div style="display: flex;">
 
@@ -234,7 +225,7 @@ plt.show()
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"_":["revealjs_prac.md","\\","\\","\\"],"static":"docs","css":"custom.css","speaker-notes":true,"speakerNotes":true}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":"c/t","transition":"slide","navigationMode":"linear","_":["revealjs_prac.md"],"static":"docs","css":"css/lecture.css","speaker-notes":true,"speakerNotes":true}, queryOptions);
     </script>
 
 

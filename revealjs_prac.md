@@ -1,3 +1,16 @@
+---
+title: "My Presentation"
+author: "Young Joon Oh"
+theme: "night"
+
+revealOptions:
+  controls: true
+  progress: true
+  slideNumber: "c/t"
+  transition: "slide"
+  navigationMode: "linear"
+---
+
 
 # Data, Analysis, and Model
 ### Young Joon Oh
